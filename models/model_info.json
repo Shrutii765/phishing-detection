@@ -1,0 +1,76 @@
+{
+  "trained_at": "2026-10-17T12:18:04",
+  "dataset": "PhiUSIIL Phishing URL Dataset (UCI)",
+  "best_model": "Random Forest",
+  "selection_metric": "mean F1-score (5-fold cross-validation on training data)",
+  "cv_folds": 5,
+  "random_state": 42,
+  "test_size": 0.2,
+  "train_rows": 188289,
+  "test_rows": 47073,
+  "feature_names": [
+    "url_length",
+    "hostname_length",
+    "path_length",
+    "query_length",
+    "num_dots",
+    "num_subdomains",
+    "num_hyphens",
+    "num_hyphens_in_host",
+    "num_underscores",
+    "num_at_symbols",
+    "num_question_marks",
+    "num_equals",
+    "num_ampersands",
+    "num_percent",
+    "num_digits",
+    "digit_ratio",
+    "path_depth",
+    "has_ip_host",
+    "is_https",
+    "has_port",
+    "is_shortener",
+    "suspicious_word_count",
+    "has_punycode"
+  ],
+  "label_names": {
+    "0": "Legitimate",
+    "1": "Phishing"
+  },
+  "cleaning_report": {
+    "rows_loaded": 235795,
+    "missing_removed": 0,
+    "invalid_labels_removed": 0,
+    "conflicting_label_rows_removed": 0,
+    "duplicates_removed": 425,
+    "rows_after_cleaning": 235370,
+    "unparsable_urls_removed": 8,
+    "rows_used": 235362
+  },
+  "cv_results": {
+    "Logistic Regression": {
+      "accuracy": 0.9528437694089338,
+      "precision": 0.9814363884024392,
+      "recall": 0.9067268836232405,
+      "f1": 0.9426017243817117,
+      "roc_auc": 0.9802776946818119,
+      "f1_std": 0.0017453459675882401
+    },
+    "Decision Tree": {
+      "accuracy": 0.966912563985676,
+      "precision": 0.9842807926402053,
+      "recall": 0.9374945746497987,
+      "f1": 0.9603172903440674,
+      "roc_auc": 0.9863373661097737,
+      "f1_std": 0.0011009111169034548
+    },
+    "Random Forest": {
+      "accuracy": 0.9671674913081834,
+      "precision": 0.983596422615776,
+      "recall": 0.9387755230038367,
+      "f1": 0.9606628003143453,
+      "roc_auc": 0.9864775248308849,
+      "f1_std": 0.0011809964662789088
+    }
+  }
+}
